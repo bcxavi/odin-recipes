@@ -1,10 +1,19 @@
+/* ========== Global ========== */
 body {
-  background: #f1f5f3; /* gris verdoso suave */
+  background: #f1f5f3;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+/* ========== Layout / Containers ========== */
 .card {
-  width: 400px;
+  max-width: 400px;
   background: #ffffff;
   margin: 32px auto;
   padding: 16px;
@@ -12,6 +21,7 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
+/* ========== Card content ========== */
 .title {
   margin-bottom: 16px;
   font-size: 28px;
@@ -22,13 +32,25 @@ body {
   border-radius: 8px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.card h2 {
+  color: #2d6a4f;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
-li {
+.card p {
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* ========== Index recipe links ========== */
+.recipe-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recipe-links li {
   background: #edf7f0;
   border: 1px solid #d8eede;
   margin-bottom: 10px;
@@ -37,14 +59,46 @@ li {
   transition: all 0.2s ease;
 }
 
-li:hover {
+.recipe-links li:hover {
   background: #dff3e7;
   transform: translateY(-2px);
 }
 
-a {
+.recipe-links a {
+  display: block;
   text-decoration: none;
   color: #2d6a4f;
   font-weight: bold;
-  display: block;
+}
+
+/* ========== Recipe content lists ========== */
+.ingredients-list,
+.steps-list {
+  margin: 0 0 16px 20px;
+  padding: 0;
+  color: #333;
+}
+
+.ingredients-list li,
+.steps-list li {
+  margin-bottom: 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+/* ========== Actions ========== */
+.card > a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 16px;
+  background: #2d6a4f;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.card > a:hover {
+  background: #1b4332;
 }
